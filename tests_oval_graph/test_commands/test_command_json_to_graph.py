@@ -85,6 +85,7 @@ def test_command_json_to_graph_is_tty():
 
 
 def test_inquirer_choice_rule():
+    pytest.importorskip("inquirer")
     src = TestTools.get_random_dir_in_tmp() + '.json'
     args = ['-m',
             'oval_graph.command_line',

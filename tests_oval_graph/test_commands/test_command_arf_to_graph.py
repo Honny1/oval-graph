@@ -62,6 +62,7 @@ def test_command_arf_to_graph_with_out_parameter():
 
 
 def test_inquirer_choice_rule():
+    pytest.importorskip("inquirer")
     src = TestTools.get_random_dir_in_tmp()
     command_parameters = [*START_OF_COMMAND,
                           '-o',
